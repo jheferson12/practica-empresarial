@@ -1,82 +1,83 @@
+/* Variables y Reset */
 :root {
-  --color-primary: #4B77BE;
-  --color-secondary: #00D1FF;
-  --color-bg: #f0f4f8;
-  --color-text: #222;
-  --font-family: 'Inter', sans-serif;
+    --color-primary: #4B77BE;
+    --color-secondary: #00D1FF;
+    --color-text: #222222;
+    --color-label: #6b7280;
+    --font-family: 'Inter', sans-serif;
 }
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body, html {
-  height: 100%;
-  font-family: var(--font-family);
-  background: linear-gradient(135deg, #4B77BE, #00D1FF);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Estilos base del BODY (CRUCIAL para centrado y fondo completo) */
+body {
+    font-family: var(--font-family);
+    /* Fondo deseado */
+    background: linear-gradient(135deg, #4B77BE, #00D1FF);
+    /* Centra el contenido y asegura que el fondo cubra todo (Solución al fondo blanco) */
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; 
 }
 
-.bienvenida-container {
-  width: 100%;
-  max-width: 400px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  padding: 40px 30px;
-  text-align: center;
-  animation: fadeIn 1.2s ease-in-out;
+/* ------------------------------------------- */
+/* Estilos de la Pantalla de Bienvenida */
+/* ------------------------------------------- */
+#contenedor-principal {
+    width: 90%;
+    /* ANCHO AJUSTADO para la transición */
+    max-width: 440px; 
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .icono-app {
-  font-size: 60px;
-  color: var(--color-primary);
-  margin-bottom: 20px;
+    font-size: 50px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
 }
 
 .titulo {
-  font-size: 26px;
-  font-weight: 900;
-  color: var(--color-text);
-  margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 10px;
 }
 
 .subtitulo {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 30px;
+    font-size: 16px;
+    color: var(--color-label);
+    margin-bottom: 30px;
 }
 
 .btn-comenzar {
-  display: inline-block;
-  padding: 14px 30px;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background 0.3s ease;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--color-secondary);
+    color: #ffffff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 209, 255, 0.4); 
 }
 
 .btn-comenzar:hover {
-  background-color: #375a8b;
-}
-
-/* Animación de entrada */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    background: #00b3e6;
+    box-shadow: 0 6px 20px rgba(0, 209, 255, 0.6);
+    transform: translateY(-2px); 
 }

@@ -19,7 +19,7 @@
 body {
     font-family: var(--font-family);
     /* Fondo con un degradado suave y moderno */
-    background: linear-gradient(135deg, #f0f4f8 0%, #e2eaf2 100%);
+    background: linear-gradient(135deg, #4B77BE, #00D1FF);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,8 +30,8 @@ body {
 /* 2. Contenedor de la Aplicación y Animación de Carga */
 /* ---------------------------------- */
 .app-screen {
-    width: 100%;
-    max-width: 400px;
+    width: 130%;
+    max-width: 500px;
     min-height: 80vh;
     background-color: #ffffff;
     display: flex;
@@ -40,7 +40,7 @@ body {
     /* Estilo de tarjeta moderna */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
-    padding: 30px;
+    padding: 50px;
 }
 
 /* Define la animación de entrada suave (Fade-in) */

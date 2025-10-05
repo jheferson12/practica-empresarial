@@ -19,6 +19,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  background: linear-gradient(135deg, #4B77BE, #00D1FF);
 }
 
 .container {

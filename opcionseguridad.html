@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seguridad de la cuenta</title>
+
+  <!-- Fuentes y estilos externos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .app-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .app-screen {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .icon-header {
+      font-size: 40px;
+      color: #1e88e5;
+      margin-bottom: 10px;
+    }
+
+    .header h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .btn {
+      background-color: #1e88e5;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .btn:hover {
+      background-color: #1565c0;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin: 25px 0 10px;
+      font-weight: 600;
+      color: #1e88e5;
+    }
+
+    .device-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .device-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logout-btn {
+      background-color: #e53935;
+      border: none;
+      padding: 6px 12px;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .logout-btn:hover {
+      background-color: #c62828;
+    }
+
+    .alert-box {
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 12px 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .link-back {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #1e88e5;
+      text-decoration: none;
+    }
+
+    .link-back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="app-screen">
+      <div class="header">
+        <div class="icon-header">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h2>Seguridad de la cuenta</h2>
+        <p class="subtitle">Administra la seguridad de tu cuenta para mantenerla protegida.</p>
+      </div>
+
+      <!-- Alerta -->
+      <div class="alert-box">
+        Se detectó un inicio de sesión desde un nuevo dispositivo. Revisa tu actividad reciente.
+      </div>
+
+      <!-- Botón cambiar contraseña -->
+      <button onclick="location.href='olvidar.html'" class="btn">Cambiar contraseña</button>
+
+      <!-- Actividad reciente -->
+      <h3 class="section-title">Actividad reciente</h3>
+      <ul class="device-list" id="deviceList">
+        <li>
+          <span>PC - Windows 10<br><small>Último acceso: 2025-10-04 08:45</small></span>
+          <button class="logout-btn" onclick="cerrarSesion(this)">Cerrar sesión</button>
+        </li>
+        <li>
+          <span>Móvil - Android<br><small>Último acceso: 2025-10-03 19:20</small></span>
+          <button class="logout-btn" onclick="cerrarSesion(this)">Cerrar sesión</button>
+        </li>
+        <li>
+          <span>Tablet - iOS<br><small>Último acceso: 2025-10-01 15:10</small></span>
+          <button class="logout-btn" onclick="cerrarSesion(this)">Cerrar sesión</button>
+        </li>
+      </ul>
+
+      <!-- Volver -->
+      <a href="iniciar.html" class="link-back">Volver al inicio de sesión</a>
+    </div>
+  </div>
+
+  <script>
+    function cerrarSesion(boton) {
+      const item = boton.closest('li');
+      item.remove();
+      alert('Sesión cerrada correctamente.');
+    }
+  </script>
+</body>
+</html>
+

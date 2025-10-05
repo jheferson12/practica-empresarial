@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio - FINTECHONE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .dashboard {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
+    .saldo {
+      font-size: 32px;
+      color: #1e88e5;
+      font-weight: 700;
+    }
+
+    .transacciones ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .transacciones li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .notificaciones ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .accesos-directos {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .acceso {
+      flex: 1;
+      min-width: 140px;
+      background: #1e88e5;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .acceso:hover {
+      background: #1565c0;
+    }
+
+    /* Estilo específico para el gráfico de pastel */
+    #pieChart {
+      max-width: 600px;
+      max-height: 600px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Estilo para imagen y nombre perfil */
+    .perfil-usuario {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .foto-perfil {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #1e88e5;
+    }
+
+    .nombre-usuario {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #1e88e5;
+    }
+  </style>
+
+  <!-- Incluir Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+
+    <!-- Perfil usuario -->
+    <div class="perfil-usuario">
+      <img src="c:/Users/jheferson/Documents/iamgenpractica.jpg" alt="Foto de perfil" class="foto-perfil" />
+      <h2 class="nombre-usuario">Carlos Mendoza</h2>
+    </div>
+
+    <!-- Resumen de cuenta -->
+    <div class="card resumen">
+      <h2>Resumen de cuenta</h2>
+      <p class="saldo">Saldo actual: $3,250.75</p>
+      <div class="transacciones">
+        <h3>Últimas transacciones</h3>
+        <ul>
+          <li>Pago recibido – $500.00</li>
+          <li>Compra en línea – $75.99</li>
+          <li>Transferencia enviada – $120.00</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Gráfico de barras -->
+    <div class="card grafico">
+      <h3>Ingresos vs Gastos (meses)</h3>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <!-- Gráfico de pastel -->
+    <div class="card grafico">
+      <h3>Gastos por categoría</h3>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- Notificaciones -->
+    <div class="card notificaciones">
+      <h2>Notificaciones rápidas</h2>
+      <ul>
+        <li>Alerta: intento de inicio de sesión desde nuevo dispositivo.</li>
+        <li>Recordatorio: pago pendiente de tarjeta vence mañana.</li>
+      </ul>
+    </div>
+
+    <!-- Accesos directos -->
+    <div class="card accesos-directos">
+      <a href="#" class="acceso">Transferencias</a>
+      <a href="#" class="acceso">Movimientos</a>
+      <a href="#" class="acceso">Recargar saldo</a>
+      <a href="opciones.html" class="acceso">Volver a el perfil</a>
+    </div>
+  </div>
+
+  <!-- Scripts para gráficos -->
+  <script>
+    // Gráfico de barras
+    const ctxBar = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(ctxBar, {
+      type: 'bar',
+      data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+        datasets: [
+          {
+            label: 'Ingresos',
+            data: [1200, 1500, 1100, 1700, 1800, 1600],
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Gastos',
+            data: [800, 900, 700, 1200, 1100, 1000],
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Gráfico de pastel
+    const ctxPie = document.getElementById('pieChart').getContext('2d');
+    const pieChart = new Chart(ctxPie, {
+      type: 'pie',
+      data: {
+        labels: ['Alimentación', 'Transporte', 'Entretenimiento', 'Compras', 'Otros'],
+        datasets: [{
+          data: [300, 150, 100, 80, 50],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)'
+          ],
+          borderColor: [
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 99, 132, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script>
+</body>
+</html>
