@@ -131,6 +131,25 @@
       text-decoration: none;
     }
 
+    /* Botón cambiar de usuario */
+.btn-cambiar-usuario {
+  background-color: #1e90ff;
+  color: white;
+  padding: 14px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(30, 144, 255, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cambiar-usuario:hover {
+  background-color: #0a3d62;
+  transform: translateY(-2px);
+}
+
     .link-back:hover {
       text-decoration: underline;
     }
@@ -174,16 +193,31 @@
 
       <!-- Volver -->
       <a href="iniciar.html" class="link-back">Volver al inicio de sesión</a>
+      <!-- Botón Cambiar de Usuario -->
+    <div style="text-align: center; margin-top: 40px;"> 
+      <button onclick="cambiarUsuario()" class="btn-cambiar-usuario">
+        REGRESAR AL USUARIO
+      </button>      
     </div>
   </div>
+    </div>
+  </div>
+  
 
-  <script>
-    function cerrarSesion(boton) {
-      const item = boton.closest('li');
+  <!-- Script -->
+<script>
+  function cambiarUsuario() {
+    // Redirige a otra página (como login u opciones)
+    window.location.href = 'opciones.html'; // Cambia si es 'login.html'
+  }
+
+  function cerrarSesion(boton) {
+    const item = boton.closest('li');
+    if (item) {
       item.remove();
       alert('Sesión cerrada correctamente.');
     }
-  </script>
-</body>
-</html>
+  }
+</script>
+
 

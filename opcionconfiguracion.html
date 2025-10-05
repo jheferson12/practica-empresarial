@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Configuración - FintechOne</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="opcionconfiguracion.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Configuración</h1>
+
+    <section>
+      <h2>Cuenta</h2>
+      <ul>
+        <li><a href="#">Editar perfil</a></li>
+        <li><a href="#">Cambiar contraseña</a></li>
+        <li><a href="#">Cerrar sesión</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Notificaciones</h2>
+      <ul>
+        <li><a href="#">Configurar alertas por correo</a></li>
+        <li><a href="#">Notificaciones push</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacidad</h2>
+      <ul>
+        <li><a href="#">Permisos y accesos</a></li>
+        <li><a href="#">Eliminar mi cuenta</a></li>
+      </ul>
+    </section>
+
+    <!-- Botón Cambiar de Usuario -->
+    <div style="text-align: center; margin-top: 40px;">
+      <button onclick="cambiarUsuario()" class="btn-cambiar-usuario">
+        ELIMINAR EL USUARIO
+      </button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function cambiarUsuario() {
+      // Simula cerrar sesión y redirige al login
+      window.location.href = 'pantalla.html'; // Asegúrate de tener login.html en tu proyecto
+    }
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayuda - FintechOne</title>
+  <link rel="stylesheet" href="opcionayuda.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Centro de Ayuda</h1>
+
+    <section>
+      <h2>Preguntas Frecuentes</h2>
+      <ul>
+        <li>
+          <strong>¿Cómo recupero mi contraseña?</strong><br />
+          Puedes restablecerla desde la página de inicio de sesión haciendo clic en “¿Olvidaste tu contraseña?”.
+        </li>
+        <li>
+          <strong>¿Es segura mi información en FintechOne?</strong><br />
+          Sí. Utilizamos cifrado de extremo a extremo y autenticación de dos factores.
+        </li>
+        <li>
+          <strong>¿Cómo puedo contactar con soporte?</strong><br />
+          Puedes escribirnos a <a href="mailto:soporte@fintechone.com">soporte@fintechone.com</a> o usar nuestro chat en vivo.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>Si no encuentras lo que buscas, contáctanos directamente:</p>
+      <ul>
+        <li>Email: <a href="mailto:soporte@fintechone.com">soporte@fintechone.com</a></li>
+        <li>WhatsApp: <a href="https://wa.me/123456789">+1 234 567 89</a></li>
+      </ul>
+    </section>
+
+     <!-- Botón Cambiar de Usuario -->
+    <div style="text-align: center; margin-top: 40px;">
+      <button onclick="cambiarUsuario()" class="btn-cambiar-usuario">
+        REGRESAR AL USUARIO
+      </button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function cambiarUsuario() {
+      // Simula cerrar sesión y redirige al login
+      window.location.href = 'opciones.html'; // Asegúrate de tener login.html en tu proyecto
+    }
+  </script>
+  </div>
+</body>
+</html>
