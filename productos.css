@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6fa;
+}
+
+.sidebar {
+  width: 50vw; /* Mitad de la pantalla */
+  height: 80vh; /* Un poco más pequeña que toda la altura */
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #4B77BE;
+  margin-bottom: 20px;
+}
+
+.logo i {
+  color: #00D1FF;
+  font-size: 22px;
+}
+
+.search-box {
+  position: relative;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-box i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #888;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 20px 0;
+}
+
+.icon-section i {
+  font-size: 26px;
+  color: #4B77BE;
+  transition: 0.3s ease;
+}
+
+.icon-section i:hover {
+  color: #00D1FF;
+  transform: scale(1.1);
+}
+
+.map-section img {
+  width: 80%;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.user-list {
+  width: 90%;
+  margin-top: auto;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 15px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.user-item i {
+  font-size: 24px;
+  color: #4B77BE;
+}
+
+.user-item:hover {
+  color: #00D1FF;
+  transform: translateX(5px);
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+}
