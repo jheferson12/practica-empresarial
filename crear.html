@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINTECHONE - Crear Cuenta</title>
+    <!-- 1. Importar la fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- 2. Importar iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- 3. Enlace al archivo CSS con los estilos -->
+    <link rel="stylesheet" href="crear.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Contenedor principal para la aplicación -->
+        <div class="app-screen fade-in">
+            <header class="app-header">
+                <h1>FINTECHONE</h1>
+            </header>
+
+            <main class="content-area">
+                <!-- Título de la sección de registro -->
+                <h2 class="section-title">CREA TU CUENTA</h2>
+                
+                <form class="account-form register-form">
+                    
+                    <!-- Input Group: Nombre Completo -->
+                    <div class="input-group">
+                        <label for="full-name">NOMBRE COMPLETO</label>
+                        <input type="text" id="full-name" required>
+                    </div>
+
+                    <!-- Input Group: Cédula (NIT, ID) -->
+                    <div class="input-group">
+                        <label for="cedula">CÉDULA (NIT, ID)</label>
+                        <input type="text" id="cedula" required>
+                    </div>
+
+                    <!-- Input Group: Celular -->
+                    <div class="input-group">
+                        <label for="phone">CELULAR</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <!-- Input Group: Email -->
+                    <div class="input-group">
+                        <label for="email-register">EMAIL</label>
+                        <input type="email" id="email-register" required>
+                    </div>
+
+                    <!-- Input Group: Contraseña -->
+                    <div class="input-group password-group">
+                        <label for="contrasena-register">CONTRASEÑA</label>
+                        <input type="password" id="contrasena-register" required>
+                        <!-- Usamos data-target para enlazar el icono del ojo al input -->
+                        <span class="password-toggle" data-target="contrasena-register"><i class="fas fa-eye"></i></span> 
+                    </div>
+
+                    <!-- Input Group: Confirmar Contraseña -->
+                    <div class="input-group password-group">
+                        <label for="contrasena-confirm">CONFIRMAR CONTRASEÑA</label>
+                        <input type="password" id="contrasena-confirm" required>
+                        <!-- Usamos data-target para enlazar el icono del ojo al input -->
+                        <span class="password-toggle" data-target="contrasena-confirm"><i class="fas fa-eye"></i></span> 
+                    </div>
+                    
+                    <!-- Botón Principal "CREAR" -->
+                    <button type="submit" class="btn primary-btn create-btn">
+                        CREAR
+                    </button>
+                    
+                    <!-- Enlace para Iniciar Sesión -->
+                    <div class="register-prompt">
+                        <span>¿Ya tienes cuenta?</span> <a href="codigo.html" class="link-secondary">Inicia sesión</a>
+                    </div>
+                </form>
+
+                <div class="social-login register-social-login">
+                    <p>O regístrate con:</p>
+                    <div class="social-buttons">
+                        <!-- Botón para Facebook -->
+                        <button class="btn social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <!-- Botón para Google -->
+                        <button class="btn social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Reutilizamos el archivo JavaScript (script.js) para la funcionalidad del ojo -->
+    <script src="script.js"></script> 
+</body>
+</html>
+
+
+
+

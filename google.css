@@ -1,0 +1,131 @@
+:root {
+    --color-primary: #4B77BE;
+    --color-primary-dark: #375a8b;
+    --color-secondary: #00D1FF;
+    --color-text: #222222;
+    --font-family: 'Inter', sans-serif;
+    --color-google: #DB4437;
+    --color-facebook: #1877F2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2eaf2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    padding: 20px 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.app-screen {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-social {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.provider-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: var(--color-google);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+.provider-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    position: relative;
+}
+
+.input-group label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #D1D5DB;
+    padding: 6px 0;
+    font-size: 15px;
+    color: var(--color-text);
+    outline: none;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: var(--color-google);
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #0622ac;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.link-back {
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.link-back:hover {
+    text-decoration: underline;
+}

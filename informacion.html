@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Información</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="informacion.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Informacion</h1>
+        </header>
+
+        <section class="info-menu">
+            <a href="#" class="info-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Compras</span>
+            </a>
+            <a href="#" class="info-item">
+                <i class="fas fa-credit-card"></i>
+                <span>Tarjeta</span>
+            </a>
+            <a href="#" class="info-item">
+                <i class="fas fa-wallet"></i>
+                <span>Saldo</span>
+            </a>
+            <a href="#" class="info-item">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Pagos</span>
+            </a>
+            <a href="#" class="info-item">
+                <i class="fas fa-user-circle"></i>
+                <span>Cuenta</span>
+            </a>
+            <a href="#" class="info-item">
+                <i class="fas fa-cogs"></i>
+                <span>Configuración</span>
+            </a>
+            <a href="#" class="info-item">
+                <i class="fas fa-info-circle"></i>
+                <span>Acerca de</span>
+            </a>
+        </section>
+
+        <div class="logout-container">
+            <button class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </div>
+
+    <script>
+        function cerrarSesion() {
+            alert("Sesión cerrada correctamente.");
+            window.location.href = "ingresar-google.html"; // Cambia aquí si quieres otra página
+        }
+    </script>
+</body>
+</html>

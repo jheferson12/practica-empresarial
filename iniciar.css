@@ -1,0 +1,263 @@
+/* ---------------------------------- */
+/* 1. Variables y Reset */
+/* ---------------------------------- */
+:root {
+    --color-primary: #4B77BE; /* Azul Principal */
+    --color-primary-dark: #375a8b; /* Azul para hover */
+    --color-secondary: #00D1FF; /* Azul brillante para detalles */
+    --color-text: #222222;
+    --color-label: #6b7280; /* Gris para las etiquetas */
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    /* Fondo con un degradado suave y moderno */
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2eaf2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ---------------------------------- */
+/* 2. Contenedor de la Aplicación y Animación de Carga */
+/* ---------------------------------- */
+.app-screen {
+    width: 100%;
+    max-width: 400px;
+    min-height: 80vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* Estilo de tarjeta moderna */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    padding: 30px;
+}
+
+/* Define la animación de entrada suave (Fade-in) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    /* Aplica la animación al cargar la pantalla */
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* ---------------------------------- */
+/* 3. Tipografía y Encabezado */
+/* ---------------------------------- */
+.app-header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--color-primary-dark);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    /* Detalle creativo en la parte inferior */
+    border-bottom: 3px solid var(--color-secondary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ---------------------------------- */
+/* 4. Formulario e Inputs */
+/* ---------------------------------- */
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+.input-group label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-label);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #D1D5DB; 
+    padding: 8px 0;
+    font-size: 16px;
+    color: var(--color-text);
+    outline: none;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom-color: var(--color-primary); /* Efecto de enfoque suave */
+}
+
+/* Icono de Contraseña */
+.input-group {
+    position: relative;
+}
+.password-group input {
+    padding-right: 30px; 
+}
+.password-toggle {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    cursor: pointer;
+    color: var(--color-label);
+    font-size: 16px;
+    transition: color 0.2s;
+}
+.password-toggle:hover {
+    color: var(--color-primary); /* Efecto animado al pasar el ratón */
+}
+
+/* Enlace Olvidé Contraseña y Registro */
+.forgot-password-link {
+    text-align: right;
+    margin-top: -15px; 
+}
+
+.forgot-password-link a, .register-prompt a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.register-prompt {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #888;
+}
+
+.register-prompt a.link-secondary {
+    color: var(--color-secondary); 
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* Animación de Subrayado (Hover-underline-animation) */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transform-origin: bottom right;
+    /* Transición suave para el efecto animado */
+    transition: transform 0.25s ease-out; 
+}
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* ---------------------------------- */
+/* 5. Botones (Con efecto 'flotante') */
+/* ---------------------------------- */
+.btn {
+    padding: 14px;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Transición para todos los cambios (color, sombra, transformación) */
+    transition: all 0.3s ease; 
+}
+
+.primary-btn {
+    background: var(--color-primary);
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 40px;
+    /* Sombra para dar profundidad */
+    box-shadow: 0 4px 15px rgba(75, 119, 190, 0.4); 
+}
+
+.primary-btn:hover {
+    background: var(--color-primary-dark);
+    box-shadow: 0 6px 20px rgba(75, 119, 190, 0.6);
+    transform: translateY(-2px); /* Efecto de elevación/flotante */
+}
+
+/* Social Login */
+.social-login {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.social-login p {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.social-btn {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    /* Transición de fondo suave */
+    transition: background-color 0.3s ease;
+}
+
+.social-btn i {
+    margin-right: 8px;
+}
+
+.facebook {
+    flex-grow: 1;
+    color: #1877f2;
+}
+
+.google {
+    width: 50px; 
+    flex-shrink: 0;
+    color: #db4437;
+}
+
+.social-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02); /* Pequeña animación de zoom al pasar el ratón */
+}

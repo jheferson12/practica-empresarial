@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINTECHONE - Iniciar Sesión</title>
+    <!-- 1. Importar la fuente Inter, limpia y moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- 2. Importar iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- 3. Enlace al archivo CSS con los estilos creativos (se reutiliza el mismo) -->
+    <link rel="stylesheet" href="iniciar.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- La clase 'fade-in' añade una animación de entrada suave al cargar -->
+        <div class="app-screen fade-in">
+            <header class="app-header">
+                <h1>FINTECHONE</h1>
+            </header>
+
+            <main class="content-area">
+                <h2 class="section-title">INICIA SESIÓN</h2>
+                
+                <form class="account-form login-form">
+                    
+                    <!-- Input Group: Email -->
+                    <div class="input-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email-login" required>
+                    </div>
+
+                    <!-- Input Group: Contraseña -->
+                    <div class="input-group password-group">
+                        <label for="contrasena-login">CONTRASEÑA</label>
+                        <input type="password" id="contrasena-login" required>
+                        <!-- Reutilizamos el JS del ojo, solo cambiamos el data-target -->
+                        <span class="password-toggle" data-target="contrasena-login"><i class="fas fa-eye"></i></span> 
+                    </div>
+                    
+                    <!-- Enlace de 'Olvidé mi contraseña' con animación de subrayado -->
+                    <div class="forgot-password-link">
+                        <a href="#" class="text-sm hover-underline-animation">Olvidé mi contraseña</a>
+                    </div>
+
+                    <!-- Botón Principal animado (efecto flotante con CSS) -->
+                    <button type="submit" class="btn primary-btn login-btn">
+                        INGRESAR
+                    </button>
+                    
+                    <!-- Enlace para crear cuenta -->
+                    <div class="register-prompt">
+                        <span>¿No tienes cuenta?</span> <a href="create_account.html" class="link-secondary">Regístrate aquí</a>
+                    </div>
+                </form>
+
+                <div class="social-login">
+                    <p>O inicia sesión con:</p>
+                    <div class="social-buttons">
+                        <button class="btn social-btn facebook">
+                            <i class="fab fa-facebook-f"></i> INGRESAR
+                        </button>
+                        <button class="btn social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Reutilizamos el archivo JavaScript para la funcionalidad del ojo -->
+    <script src="script.js"></script> 
+</body>
+</html>
