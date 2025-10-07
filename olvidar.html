@@ -45,24 +45,26 @@
         </div>
     </div>
 
-    <script>
-        function handleChangePassword(event) {
-            event.preventDefault();
+   <script>
+    function handleChangePassword(event) {
+        event.preventDefault();
 
-            const email = document.getElementById('email').value.trim();
-            const newPassword = document.getElementById('new-password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
+        const newPassword = document.getElementById('new-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
 
-            if (newPassword !== confirmPassword) {
-                alert("Las contraseñas no coinciden. Intenta de nuevo.");
-                return;
-            }
-
-            // Simulación de actualización de contraseña
-            console.log(`Simulación: Contraseña actualizada para ${email}.`);
-            alert("Tu contraseña ha sido cambiada exitosamente.");
-            window.location.href = "ingresar-google.html"; // Cambia la URL si usas Facebook o lo que quieras
+        if (newPassword !== confirmPassword) {
+            alert("Las contraseñas no coinciden. Intenta de nuevo.");
+            return;
         }
-    </script>
+
+        // Simulación de actualización de contraseña
+        console.log("Simulación: Contraseña actualizada.");
+        alert("Tu contraseña ha sido cambiada exitosamente.");
+
+        // Redirección al inicio de sesión
+        window.location.href = "iniciar.html";
+    }
+</script>
+
 </body>
 </html>
