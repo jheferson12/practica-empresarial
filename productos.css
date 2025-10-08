@@ -179,3 +179,70 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+.btn-logout {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #1565c0;
+}
+
+/* Botones de pago */
+.btn-pago {
+  background-color: #007bff;  /* Azul */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 10px 5px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pago:hover {
+  background-color: #0056b3; /* Azul más oscuro al hover */
+}
+
+/* Botón para volver */
+.btn-volver {
+  background-color: #6c757d; /* Gris */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #5a6268; /* Gris más oscuro al hover */
+}
+
+/* Botón logout en transacciones */
+.btn-logout {
+  background-color: #dc3545; /* Rojo */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #c82333; /* Rojo más oscuro al hover */
+}
+

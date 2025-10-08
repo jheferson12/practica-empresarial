@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pago con Tarjeta — Diseño Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pagotarjeta.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card-preview">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="font-weight:700">PAGO PERSONALIZADO</div>
+        <div style="font-size:12px;color:var(--muted)">Tarjeta</div>
+      </div>
+
+      <div class="card-wrap">
+        <div id="cardInner" class="card-inner">
+          <div class="card card-front" id="cardFront" style="background:linear-gradient(135deg,#7C5CFF,#4AE3C6)">
+            <div class="brand">
+              <div class="chip" aria-hidden="true"></div>
+              <div id="brandIcon" style="font-size:14px;opacity:0.95">CARD</div>
+            </div>
+            <div class="number" id="displayNumber">#### • ###• #### • ####</div>
+            <div class="row">
+              <div>
+                <div class="small">Titular</div>
+                <div class="name" id="displayName">NOMBRE APELLIDO</div>
+              </div>
+              <div style="text-align:right">
+                <div class="small">Válido</div>
+                <div class="name" id="displayExpiry">MM/AA</div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-back" id="cardBack" style="background:linear-gradient(135deg,#FF6B6B,#FFB86B); transform:rotateY(180deg)">
+            <div style="background:#000; height:36px; margin-top:14px; border-radius:4px"></div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 6px;">
+              <div style="flex:1; margin-right:10px;">
+                <div style="background:#fff; height:34px; border-radius:4px; display:flex; align-items:center; padding:6px 8px; color:#111;">
+                  <span id="displayCvv">•••</span>
+                </div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.85); margin-top:8px">CVV</div>
+              </div>
+              <div style="width:64px; text-align:right; font-weight:700; font-size:14px">BANK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="muted">Personaliza: color o sube imagen</div>
+        <div style="display:flex; gap:8px; margin-top:8px">
+          <button class="btn" id="theme1" style="background:linear-gradient(90deg,#7C5CFF,#4AE3C6); color:white; width:auto; padding:8px 10px; font-weight:600">Neón</button>
+          <button class="btn" id="theme2" style="background:linear-gradient(90deg,#FF6B6B,#FFB86B); color:#042236; width:auto; padding:8px 10px; font-weight:600">Cálido</button>
+          <input id="bgFile" type="file" accept="image/*" style="background:transparent; color:var(--muted); border-radius:10px; padding:8px 12px"/>
+        </div>
+      </div>
+    </div>
+
+    <form id="paymentForm" autocomplete="off" novalidate>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h3 style="margin:0">Pagar con tarjeta</h3>
+        <div style="font-size:13px;color:var(--muted)">Total: <strong style="margin-left:6px">€49.99</strong></div>
+      </div>
+
+      <div class="field">
+        <label for="cardNumber">Número de tarjeta</label>
+        <input id="cardNumber" placeholder="Escribe lo que quieras aquí" />
+        <div id="errNumber" class="error" style="display:none"></div>
+      </div>
+
+      <div class="row-grid">
+        <div class="field">
+          <label for="cardName">Nombre en la tarjeta</label>
+          <input id="cardName" placeholder="Nombre Apellido o cualquier cosa" />
+          <div id="errName" class="error" style="display:none"></div>
+        </div>
+        <div class="field">
+          <label>Caducidad</label>
+          <div style="display:flex; gap:8px">
+            <input id="expMonth" placeholder="MM" style="width:70px" />
+            <input id="expYear" placeholder="AA" style="width:70px" />
+          </div>
+          <div id="errExp" class="error" style="display:none"></div>
+        </div>
+      </div>
+
+      <div class="row-grid">
+        <div class="field">
+          <label for="cvv">CVV</label>
+          <input id="cvv" placeholder="Cualquier texto" style="width:120px" />
+          <div id="errCvv" class="error" style="display:none"></div>
+        </div>
+        <div class="field">
+          <label for="save">Opciones</label>
+          <select id="save" aria-label="Opciones de pago">
+            <option value="one">Pagar una vez</option>
+            <option value="save">Guardar tarjeta (tokenizar)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hint">Tu pago será procesado de forma segura. Pulsa <strong>Pagar ahora</strong> para continuar.</div>
+      <button type="submit" class="btn" id="payBtn">Pagar ahora</button>
+      <div id="formStatus" style="margin-top:10px"></div>
+    </form>
+  </div>
+
+<script src="pagotarjeta.js"></script>
+</body>
+</html>
