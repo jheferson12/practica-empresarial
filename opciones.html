@@ -22,12 +22,23 @@
     <nav class="menu">
       <a href="opcionesinicio.html" class="menu-item"><i class="fas fa-home"></i> Inicio</a>
       <a href="opcionseguridad.html" class="menu-item"><i class="fas fa-shield-alt"></i> Seguridad</a>
-      <a href="productos.html" class="menu-item"><i class="fas fa-percent"></i> Comisiones</a>
+      <a href="productos.html" class="menu-item"><i class="fas fa-percent"></i> Productos y mercados</a>
       <a href="opcionconfiguracion.html" class="menu-item"><i class="fas fa-cogs"></i> Configuración</a>
       <a href="informacion.html" class="menu-item"><i class="fas fa-info-circle"></i> Información</a>
       <a href="opcionayuda.html" class="menu-item"><i class="fas fa-question-circle"></i> Ayuda</a>
       <a href="pagotarjeta.html" class="menu-item"><i class="fas fa-credit-card"></i> Pagar con Tarjeta</a>
     </nav>
+     <div class="logout-container">
+      <button class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <script>
+    function cerrarSesion() {
+      alert("Sesión cerrada correctamente.");
+      window.location.href = "pantalla.html";
+    }
+  </script>
   </div>
 </body>
 </html>

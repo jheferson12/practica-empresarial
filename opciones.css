@@ -80,6 +80,67 @@ body {
 }
 
 .menu-item:hover {
-  background-color: #e4ecf9;
+  background-color: #0e97ece2;
 }
 
+.btn-logout {
+  background-color: var(--color-danger);
+  color: #11ade1;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn-logout:hover {
+  background-color: var(--color-danger-dark);
+  transform: scale(1.02);
+}
+
+/* Contenedor para posicionar el botón */
+.logout-container {
+    /* Asegura que el botón se centre o se posicione correctamente 
+       en la parte inferior de la barra lateral, si es necesario. */
+    width: 100%; 
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    text-align: center;
+}
+
+/* Estilo del botón de Cerrar Sesión */
+.btn-logout {
+    /* Diseño Base */
+    background-color: #007bff; /* 🔄 ¡AZUL! (Color Primario) */
+    color: white; 
+    border: none;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    cursor: pointer;
+    
+    /* Tipografía y Espaciado */
+    padding: 12px 25px; 
+    font-size: 16px; 
+    font-weight: 600; /* Fuente semi-negrita */
+    width: 80%; /* Ocupa buena parte del ancho del contenedor */
+    max-width: 250px; /* Limita el ancho máximo en pantallas grandes */
+    
+    /* Efectos */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+}
+
+/* Efecto al pasar el mouse (hover) */
+.btn-logout:hover {
+    background-color: #0056b3; /* 🔄 Azul un poco más oscuro al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Efecto al hacer click (active) */
+.btn-logout:active {
+    background-color: #004085; /* 🔄 Azul más oscuro aún al hacer click */
+    transform: translateY(1px); /* Ligero movimiento para simular el click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra reducida */
+}

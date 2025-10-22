@@ -93,6 +93,23 @@ ul li a:hover {
   transform: translateY(-2px);
 }
 
+.volver-container {
+  display: flex;
+  justify-content: center;
+}
+
+.volver-btn {
+  background-color: #00AEEF;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Animación */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }

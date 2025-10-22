@@ -5,11 +5,11 @@ body {
 }
 
 .sidebar {
-  width: 50vw; /* Mitad de la pantalla */
-  height: 80vh; /* Un poco más pequeña que toda la altura */
+  width: 50vw; 
+  height: 40vw; 
   background: #ffffff;
   border: 2px solid #e0e0e0;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -20,8 +20,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  
 }
+
 
 .logo {
   display: flex;
@@ -54,9 +55,9 @@ body {
 }
 
 .search-box i {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  position: absolute;  
+  right: 15px;
+  top: 6px;
   color: #888;
 }
 
@@ -127,8 +128,6 @@ body {
   height: 100%; /* Para que el iframe ocupe toda la altura del contenedor */
   border: none;
 }
-
-
 
 .main-content {
   width: 90%;
@@ -246,25 +245,75 @@ body {
   background-color: #c82333; /* Rojo más oscuro al hover */
 }
 
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
 .volver-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .volver-btn {
-  background-color: #0faae2;
+  background-color: #00AEEF;
   color: white;
   padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: flex;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
+
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.icon-item i {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.icon-item span {
+  font-size: 14px;
+}
+.navegar-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.navegar-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.navegar-btn i {
+  margin-right: 5px;
+}
+
+.navegar-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
 
 
 

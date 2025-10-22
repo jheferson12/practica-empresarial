@@ -106,3 +106,46 @@ body {
   background-color: var(--color-danger-dark);
   transform: scale(1.02);
 }
+
+/* Contenedor para posicionar el botón al final */
+.volver-container {
+    width: 100%;
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    text-align: center;
+    /* Para que se posicione bien si el contenedor principal es flex */
+    margin-top: auto; 
+}
+
+/* Estilo del botón 'Volver a la Sesión' (AZUL) */
+.btn-volver-sesion {
+    /* Diseño Base */
+    background-color: #007bff; /* AZUL PRIMARIO */
+    color: white; 
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    
+    /* Tipografía y Espaciado */
+    padding: 12px 25px; 
+    font-size: 16px; 
+    font-weight: 600;
+    width: 80%; 
+    max-width: 250px;
+    
+    /* Efectos */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto al pasar el mouse (hover) */
+.btn-volver-sesion:hover {
+    background-color: #0056b3; /* Azul un poco más oscuro */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto al hacer click (active) */
+.btn-volver-sesion:active {
+    background-color: #004085; /* Azul más oscuro aún */
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -28,11 +28,21 @@
     </div>
 
     <!-- Sección de Íconos Funcionales -->
-    <div class="icon-section">
-      <i class="fa-solid fa-cart-shopping" id="cartIcon" title="Carrito de Compras"></i>
-      <i class="fa-solid fa-box" id="packageIcon" title="Productos Disponibles"></i>
-      <i class="fa-solid fa-sack-dollar" id="moneyIcon" title="Transacciones Recientes"></i>
-    </div>
+   <div class="icon-section">
+  <div class="icon-item">
+    <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+    <span>Carrito de Compras</span>
+  </div>
+  <div class="icon-item">
+    <i class="fa-solid fa-box" id="packageIcon"></i>
+    <span>Productos Disponibles</span>
+  </div>
+  <div class="icon-item">
+    <i class="fa-solid fa-sack-dollar" id="moneyIcon"></i>
+    <span>Transacciones Recientes</span>
+  </div>
+</div>
+
 
     <!-- Contenido Dinámico -->
     <div id="main-content" class="main-content">
@@ -50,33 +60,14 @@
         allowfullscreen=""
         loading="lazy"
       ></iframe>
-    </div>
-
-    <!-- Lista de Usuarios -->
-    <div class="user-list">
-      <div class="user-item">
-        <i class="fa-solid fa-user-circle"></i><span>USUARIO</span>
-      </div>
-      <div class="user-item">
-        <i class="fa-solid fa-user-circle"></i><span>USUARIO</span>
-      </div>
-      <div class="user-item">
-        <i class="fa-solid fa-user-circle"></i><span>USUARIO</span>
-      </div>
-      <div class="volver-container">
-  <a href="opciones.html" class="volver-btn">
-  <i class="fa-solid fa-arrow-left"></i> Volver al Usuario
-</a>
-
+    </div> 
+    
+   <div class="navegar-container" id="btnVolverOpciones">
+  <a href="opciones.html" class="navegar-btn">
+    Volver a opciones
+  </a>
+</div>      
 </div>
-    </div>
-  </div>
-  
-  <!-- Botón Volver al Usuario -->
-
-
-  
-
   <!-- Script JavaScript -->
   <script src="totalproductos.js"></script>
 </body>
